@@ -35,20 +35,34 @@ app.get("/login",(request,response)=>{
    response.render('login.ejs');
 });
 
+//Traitement du formulaire de connexion
+app.post("/login",(request,response)=>{
+    const {email, mdp} = request.body;
+    const sql = `SELECT * FROM users WHERE email='${email}' AND mdp='${mdp}'`;
+    con.query(sql,(error,result)=>{
+       if (error) throw error;
+       if (result.length > 0){
+           response.redirect('/');
+       }else {
+           response.send("identifiant ou mot de passe icorrect");
+       }
+    });
+});
+
 //Affichage de la page d'inscription
 app.get("/register", (request,response)=>{
     response.render('signup.ejs');
 });
 
 //Traitement du formulaire d'inscription
-app.post("/regtrait",(request,response)=>{
+app.post("/register",(request,response)=>{
     const { nom, prenom, email, pass } = request.body;
     const mdpc = request.body.cpass;
     if (pass == mdpc)
     {
         const sql = `INSERT INTO users(nom, prenom, email, mdp) VALUES ('${nom}', '${prenom}', '${email}', '${pass}')`;
-        con.query(sql, (err, result) => {
-            if (err) throw err;
+        con.query(sql, (error, result) => {
+            if (error) throw error;
             console.log(result);
             response.redirect('/login');
         });

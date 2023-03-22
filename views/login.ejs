@@ -12,25 +12,25 @@
         <div class="col-md-6">
           <ul class="nav nav-tabs mb-3">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#inscription">Sign in</a>
+              <a class="nav-link active" data-toggle="tab" href="#inscription">Connexion</a>
             </li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade show active" id="inscription">
-              <form method="post" action="/conntrait">
+              <form method="post" action="/login">
 
                    <div class="form-group">
                      <label for="email">Email</label>
-                     <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                     <input type="email" class="form-control" name="email" placeholder="Adresse email">
                    </div>
                    <div class="form-group">
-                     <label for="mdp">Password</label>
-                     <input type="password" class="form-control" id="mdp" placeholder="Enter votre mot de passe">
+                     <label for="mdp">Mot de passe</label>
+                     <input type="password" class="form-control" name="mdp" placeholder="Mot de passe">
                    </div>
                    </br>
                    <div class="row">
                        <div class="col-4">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit" class="btn btn-primary">Connexion</button>
                        </div>
                        <div class="col-5 display-block">
                         <span>you don't have an account ?</span>
