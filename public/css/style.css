@@ -1,0 +1,12 @@
+body {
+    padding: 40px;
+    background-color: #007bff;
+}
+.jumbotron {
+    background-color: transparent;
+    animation: fade-in 2s;
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

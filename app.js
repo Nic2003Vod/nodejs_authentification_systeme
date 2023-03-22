@@ -1,10 +1,14 @@
 import express from "express";
+
 const app = express();
 const port = 8000;
+app.set('view engine','ejs');
+app.use(express.static('public'));
 
 app.get("/",(request,response)=>{
-    response.send("Hello world");
+    response.render('index');
 });
+
 
 app.listen(port,()=>{
    console.log(`Serveur http://localhost:${port} en cours`);
