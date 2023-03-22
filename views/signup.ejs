@@ -17,31 +17,31 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade show active" id="inscription">
-              <form>
+              <form method="post" action="/regtrait">
                 <div class="form-group">
-                  <label for="nom">Last Name</label>
-                  <input type="text" class="form-control" id="nom" placeholder="Enter your name">
+                  <label for="nom">Nom</label>
+                  <input type="text" class="form-control" name="nom" placeholder="Entrez votre nom">
                 </div>
                 <div class="form-group">
-                  <label for="nom">First Name(s)</label>
-                  <input type="text" class="form-control" id="nom" placeholder="Enter your name">
+                  <label for="nom">Prénom(s)</label>
+                  <input type="text" class="form-control" name="prenom" placeholder="Entrez votre prénom">
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                  <input type="email" class="form-control" name="email" placeholder="Entrez votre email">
                 </div>
                 <div class="form-group">
-                  <label for="mdp">Password</label>
-                  <input type="password" class="form-control" id="mdp" placeholder="Enter votre mot de passe">
+                  <label for="mdp">Mot de passe</label>
+                  <input type="password" class="form-control" name="pass" placeholder="Choisissez un mot de passe">
                 </div>
                 <div class="form-group">
-                  <label for="mdp">Confirm password</label>
-                  <input type="password" class="form-control" id="mdp" placeholder="Entrez votre mot de passe">
+                  <label for="mdp">Confirmez mot de passe</label>
+                  <input type="password" class="form-control" name="cpass" placeholder="Confirmez votre mot de passe">
                 </div>
                 <br>
                 <div class="row">
                    <div class="col-4">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" class="btn btn-primary">Je m'inscris</button>
                    </div>
                    <div class="col-5 display-block">
                     <span>Already have an account ?</span>
